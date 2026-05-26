@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TopStitch Homestay | Handcrafted Hospitality</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed-dim": "#e7bdb1",
+                "outline-variant": "#d4c3be",
+                "tertiary": "#303221",
+                "on-error": "#ffffff",
+                "secondary-fixed-dim": "#cfc4c0",
+                "on-surface-variant": "#504441",
+                "inverse-primary": "#e7bdb1",
+                "outline": "#827470",
+                "primary-fixed": "#ffdbd0",
+                "surface-container-highest": "#e3e2e0",
+                "secondary": "#655d5a",
+                "surface-dim": "#dbdad7",
+                "on-error-container": "#93000a",
+                "error": "#ba1a1a",
+                "on-background": "#1a1c1a",
+                "on-tertiary-container": "#b6b7a0",
+                "on-secondary-fixed": "#201a18",
+                "on-surface": "#1a1c1a",
+                "surface-container": "#efeeeb",
+                "secondary-container": "#ece0dc",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed-variant": "#474836",
+                "surface-container-low": "#f4f3f1",
+                "surface-bright": "#faf9f6",
+                "tertiary-fixed-dim": "#c8c8b0",
+                "primary": "#442a22",
+                "tertiary-fixed": "#e4e4cc",
+                "inverse-surface": "#2f312f",
+                "on-primary-fixed-variant": "#5d4037",
+                "on-primary-container": "#d4ada1",
+                "on-primary-fixed": "#2c160e",
+                "surface-container-high": "#e9e8e5",
+                "error-container": "#ffdad6",
+                "surface-tint": "#77574d",
+                "on-tertiary-fixed": "#1b1d0e",
+                "background": "#faf9f6",
+                "tertiary-container": "#474836",
+                "secondary-fixed": "#ece0dc",
+                "inverse-on-surface": "#f2f1ee",
+                "primary-container": "#5d4037",
+                "surface": "#faf9f6",
+                "on-secondary-fixed-variant": "#4c4542",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e3e2e0",
+                "on-secondary-container": "#6b6360"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "xs": "4px",
+                "lg": "48px",
+                "margin-mobile": "20px",
+                "xl": "80px",
+                "margin-desktop": "120px",
+                "sm": "12px",
+                "gutter": "20px",
+                "md": "24px",
+                "base": "8px"
+            },
+            "fontFamily": {
+                "headline-sm": ["Montserrat"],
+                "body-lg": ["Plus Jakarta Sans"],
+                "label-sm": ["Plus Jakarta Sans"],
+                "body-md": ["Plus Jakarta Sans"],
+                "headline-md": ["Montserrat"],
+                "display-lg-mobile": ["Montserrat"],
+                "label-md": ["Plus Jakarta Sans"],
+                "display-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body {
+            background-color: #faf9f6; /* Neutral Bone Level 0 */
+            -webkit-tap-highlight-color: transparent;
+        }
+        .soft-shadow {
+            box-shadow: 0px 10px 30px rgba(93, 64, 55, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-primary dark:text-primary-fixed-dim docked full-width top-0 sticky z-50 border-b border-secondary/20 dark:border-outline-variant/20 shadow-sm">
+<div class="max-w-[1200px] mx-auto w-full flex justify-between items-center px-margin-mobile py-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="home_pin">home_pin</span>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">TopStitch Homestay</h1>
+</div>
+<button class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim hover:text-primary transition-colors duration-200 scale-95 active:opacity-80 transition-all">
+                Login
+            </button>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[751px] flex flex-col justify-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover scale-105" data-alt="A warm and inviting boutique homestay bedroom with soft sunlight streaming through linen curtains. The interior features handcrafted walnut wooden furniture, neutral bone-colored walls, and textured cream bedding. Minimalist decor and a lush green plant in a ceramic pot create a sense of calm and artisanal quality. The lighting is soft and golden, highlighting the organic textures of the room." id="hero-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe7DMEEf3t8D1WeAW4PoD-qS4kEZu0TIp_WB_j2YBc7mqV3gdbKnhNfCnV8V3i4THR8Pkf6o2zNeUx3GsHBtukrx9YRnStAb3zAqW2vG0rI-JrsQ5DlRZtwyWLr9Z4OnVx2s5LhqlIFcW-rLK7ENPzuxwCYOSJKKzmEgOmA8peodVQc4AiQdoWfSHukfMzgt9_6UXzWK8MMznMfJuVx0Ox6__Y8BUxHXKf0qYWk4_2XC0rrmTUv5KbZ3ZgJa7XXRrYW8sERTmZWMak"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile pb-xl text-white">
+<div class="max-w-md animate-fade-in-up">
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-sm text-white drop-shadow-md">
+                        Your Home, <br/>Handcrafted.
+                    </h2>
+<p class="font-body-lg text-body-lg mb-lg text-white/90 leading-relaxed">
+                        Experience the warmth of artisanal hospitality in the heart of the city. Boutique living designed for the modern traveler.
+                    </p>
+<div class="flex flex-col gap-md">
+<button class="bg-primary text-white py-md px-lg rounded-xl font-headline-sm text-headline-sm soft-shadow active:scale-95 transition-all text-center">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Search Bar (Signature Component) -->
+<section class="px-margin-mobile -mt-base z-20 relative">
+<div class="bg-surface-container-lowest rounded-xl p-sm soft-shadow border border-secondary/10">
+<div class="flex items-center gap-sm bg-surface-container-low p-md rounded-lg">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-body-md text-on-surface placeholder:text-outline-variant" placeholder="Where to next?" type="text"/>
+</div>
+</div>
+</section>
+<!-- Featured Collections (Bento Style) -->
+<section class="py-xl px-margin-mobile bg-background">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest">Collections</span>
+<h3 class="font-headline-md text-headline-md mt-xs">Curated Spaces</h3>
+</div>
+<button class="font-label-md text-label-md text-outline border-b border-outline hover:text-primary hover:border-primary transition-all">View all</button>
+</div>
+<div class="grid grid-cols-2 gap-md h-[400px]">
+<div class="col-span-2 relative rounded-xl overflow-hidden soft-shadow">
+<img class="w-full h-full object-cover" data-alt="A luxurious homestay suite with a king-sized bed, featuring rich walnut wood accents and soft linen upholstery. The room is bathed in natural morning light, creating a bright and clean atmosphere. Minimalist art hangs on the cream-colored walls, and the overall aesthetic is warm and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARsFVd5S-T0dlGKePLHhj_sioHymnUoZDuaShrjY93TD8eONOuARgPHWrIVByQeXfkP5zpvScBiqtNEqvVW218E6-OfizxAmspUmadysWJH7d2mbXjgIjeX9zO50J2hDWWQ2taTJy9ooDd0Z5WEVjw8xfcxWIXB-UEHMNI19oDNdOgmxmCkYP5CZy0yVnIWzh1f_uu40k3KdKdKdman7BoVZ13EZS9TMkoVIXluByPsZa7TUqPKK9PWA-KavwFVP5mvgrI6qf0JRId"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-md left-md">
+<p class="font-headline-sm text-headline-sm text-white">The Walnut Suite</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden soft-shadow">
+<img class="w-full h-full object-cover" data-alt="A cozy, compact guest room with a minimalist design. Features include a comfortable bed with cream-colored linens, a small wooden desk, and a window looking out onto a garden. The lighting is soft and high-key, emphasizing the clean, artisanal vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJcxGYuDlCGJjg5wr-mLa9Y6iRAhJOpGqk9queIjwoslKa1CU9acI91hkYDkeos5EFA1HCGA1o_0_DKTqVTDNtBFu_qpsiL6bFwT995zH7l8AOiGrQL3vEuE1aeKuPSDMSPYWejuSH7GJ1P1ZwseyfKz018IH1nzAeFcY94zHWiJB7_MzuAuK8k808bwGLYr09FaXYxxHUn-aw36R-b6e8YcwsCzQLZY9HJfk3zBfdmKj-g8xdG5SsN5wcsrvAGgNvN6Lh6hNVR7GX"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="relative rounded-xl overflow-hidden soft-shadow bg-secondary-container flex items-center justify-center p-md text-center">
+<div>
+<span class="material-symbols-outlined text-primary text-[40px] mb-sm" data-icon="deck">deck</span>
+<p class="font-label-md text-label-md text-primary">Garden Lofts Coming Soon</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Amenities Section (Chips) -->
+<section class="py-lg bg-surface-container-low border-y border-secondary/10">
+<div class="px-margin-mobile">
+<h4 class="font-headline-sm text-headline-sm mb-md">Tailored For You</h4>
+<div class="flex flex-wrap gap-sm">
+<div class="bg-surface-container-lowest px-md py-sm rounded-lg border border-secondary/10 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="wifi">wifi</span>
+<span class="font-label-md text-label-md">Gigabit Wifi</span>
+</div>
+<div class="bg-surface-container-lowest px-md py-sm rounded-lg border border-secondary/10 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="coffee">coffee</span>
+<span class="font-label-md text-label-md">Artisanal Coffee</span>
+</div>
+<div class="bg-surface-container-lowest px-md py-sm rounded-lg border border-secondary/10 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="pets">pets</span>
+<span class="font-label-md text-label-md">Pet Friendly</span>
+</div>
+<div class="bg-surface-container-lowest px-md py-sm rounded-lg border border-secondary/10 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="workspace_premium">workspace_premium</span>
+<span class="font-label-md text-label-md">Premium Linens</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experiences (Asymmetric Layout) -->
+<section class="py-xl px-margin-mobile">
+<h3 class="font-headline-md text-headline-md mb-lg">Crafted Moments</h3>
+<div class="space-y-xl">
+<div class="relative">
+<div class="w-4/5 h-[300px] rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A beautifully set wooden dining table with handcrafted ceramic plates and glasses. Soft, warm lighting from hanging pendant lamps creates an intimate dinner atmosphere. The focus is on the textures of the wood and clay, embodying the handcrafted hospitality theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH_NbTsepRmb0Q-8mPIZ-z30jWz4PyuSMmPwIe0wPexy2Chqu1d2vnR73seqG1UewX1Y5r6jWdv526Dc2_CxogzqBhRah_JNscQb2GifL2TWX2Fy-fn_RlHV14SQ-RJeCjQN2OFUdNG41qIllAKJmpgcgCQvdXXWmK_O9PQ3sZGI1_ZNebXvJx_WQOGKu3mYG4LmDjvPz_4BOOsl3RePXJyrmwuQQzwQ9bqUSO-z33mO6k3mS1LDGQ-VmI8dt9E0r8JQZTL83oyrPJ"/>
+</div>
+<div class="absolute -bottom-lg right-0 w-3/5 bg-surface-container p-md rounded-xl border border-secondary/10 soft-shadow">
+<p class="font-label-sm text-label-sm text-outline mb-xs">Catering</p>
+<p class="font-headline-sm text-headline-sm text-primary leading-tight">Artisanal Breakfast Trays</p>
+</div>
+</div>
+<div class="relative pt-lg flex justify-end">
+<div class="w-4/5 h-[300px] rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A cozy reading nook in a homestay, featuring a soft cream-colored armchair, a walnut side table with a stack of books, and a warm reading lamp. A large window shows a glimpse of a peaceful courtyard. The vibe is quiet, serene, and perfectly minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKNBB9v0K-HCikDvLpS8xyWenxfh0_D7ZAiXMteBk7G9QsRwUAfEvWFF61SeEVl5hxq_-_5bAuedPZyKDcFJBudISYXjTiVRQabIpkysO5BB0_kbLkhjXH3upzYktlEZ4lfQeZCSsvuMkxkN17TVdKPB0i1qO76SqABG36vsLz2NRhjEqL3Cye2oQBz-5nKAmc4TSEYTrd1Ph-TVXR9FfeoaDCMXjWDa65S8mScY1zsSPahg2gHBdJyOhO1sc5gL8xiVC1q9tJTD_p"/>
+</div>
+<div class="absolute -bottom-lg left-0 w-3/5 bg-surface-container p-md rounded-xl border border-secondary/10 soft-shadow">
+<p class="font-label-sm text-label-sm text-outline mb-xs">Quietude</p>
+<p class="font-headline-sm text-headline-sm text-primary leading-tight">Curated Reading Nooks</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-xl px-margin-mobile mb-xl">
+<div class="bg-primary text-white rounded-xl p-lg text-center soft-shadow">
+<h3 class="font-headline-md text-headline-md mb-md">Ready to escape?</h3>
+<p class="font-body-md mb-lg text-white/80">Book your stay at TopStitch today and discover the true meaning of handcrafted hospitality.</p>
+<button class="bg-white text-primary py-md px-lg rounded-xl font-label-md text-label-md active:scale-95 transition-all w-full">
+                    Explore All Rooms
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-secondary/10 dark:border-outline-variant/10">
+<div class="max-w-[1200px] mx-auto w-full flex flex-col md:flex-row justify-between items-center px-margin-mobile py-xl gap-md">
+<div class="flex flex-col items-center md:items-start gap-sm mb-lg md:mb-0">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">TopStitch Homestay</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-center md:text-left">© 2024 TopStitch Homestay. Handcrafted Hospitality.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-md">
+<a class="font-label-sm text-label-sm text-primary underline transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">Rooms</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">Contact</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</nav>
+</div>
+</footer>
+<!-- Bottom Navigation (Mobile Requirement) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-lg border-t border-secondary/10 flex justify-around py-sm z-50 px-sm">
+<button class="flex flex-col items-center gap-xs text-primary">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill">home</span>
+<span class="font-label-sm text-[10px]">Home</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="bed">bed</span>
+<span class="font-label-sm text-[10px]">Rooms</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-label-sm text-[10px]">Book</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-[10px]">Profile</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions for smooth scrolling or hover effects
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('touchstart', function() {
+                this.classList.add('opacity-80', 'scale-95');
+            });
+            btn.addEventListener('touchend', function() {
+                this.classList.remove('opacity-80', 'scale-95');
+            });
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroImage = document.getElementById('hero-image');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scroll * 0.3}px) scale(1.05)`;
+            }
+        });
+    </script>
+</body></html>

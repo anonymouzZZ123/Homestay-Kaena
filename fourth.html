@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TopStitch Homestay - Guest Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#e7bdb1",
+                    "outline-variant": "#d4c3be",
+                    "tertiary": "#303221",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#cfc4c0",
+                    "on-surface-variant": "#504441",
+                    "inverse-primary": "#e7bdb1",
+                    "outline": "#827470",
+                    "primary-fixed": "#ffdbd0",
+                    "surface-container-highest": "#e3e2e0",
+                    "secondary": "#655d5a",
+                    "surface-dim": "#dbdad7",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1c1a",
+                    "on-tertiary-container": "#b6b7a0",
+                    "on-secondary-fixed": "#201a18",
+                    "on-surface": "#1a1c1a",
+                    "surface-container": "#efeeeb",
+                    "secondary-container": "#ece0dc",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#474836",
+                    "surface-container-low": "#f4f3f1",
+                    "surface-bright": "#faf9f6",
+                    "tertiary-fixed-dim": "#c8c8b0",
+                    "primary": "#442a22",
+                    "tertiary-fixed": "#e4e4cc",
+                    "inverse-surface": "#2f312f",
+                    "on-primary-fixed-variant": "#5d4037",
+                    "on-primary-container": "#d4ada1",
+                    "on-primary-fixed": "#2c160e",
+                    "surface-container-high": "#e9e8e5",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#77574d",
+                    "on-tertiary-fixed": "#1b1d0e",
+                    "background": "#faf9f6",
+                    "tertiary-container": "#474836",
+                    "secondary-fixed": "#ece0dc",
+                    "inverse-on-surface": "#f2f1ee",
+                    "primary-container": "#5d4037",
+                    "surface": "#faf9f6",
+                    "on-secondary-fixed-variant": "#4c4542",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e3e2e0",
+                    "on-secondary-container": "#6b6360"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "lg": "48px",
+                    "margin-mobile": "20px",
+                    "xl": "80px",
+                    "margin-desktop": "120px",
+                    "sm": "12px",
+                    "gutter": "20px",
+                    "md": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Montserrat"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0px 10px 30px rgba(93, 64, 55, 0.05);
+        }
+        .tonal-card {
+            border: 1px solid #655d5a1a;
+            background-color: #f4f3f1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface/80 backdrop-blur-md text-primary sticky top-0 z-50 border-b border-secondary/20 shadow-sm transition-all duration-300">
+<div class="max-w-[1200px] mx-auto w-full flex justify-between items-center px-6 md:px-margin-desktop py-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="home_pin">home_pin</span>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">TopStitch Homestay</h1>
+</div>
+<nav class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Rooms</a>
+<a class="text-primary font-bold border-b-2 border-primary transition-colors duration-200 font-label-md text-label-md" href="#">Dashboard</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="scale-95 active:opacity-80 transition-all bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md">Log Out</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-6 md:px-margin-desktop py-xl">
+<!-- Welcome Section -->
+<section class="mb-lg">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-xs">Welcome back, Arthur.</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Manage your handcrafted stay experiences and personal sanctuary details.</p>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Bookings (Bento Style) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<div class="flex justify-between items-end mb-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary">Upcoming Bookings</h3>
+<a class="text-primary font-label-md text-label-md border-b border-primary hover:opacity-70 transition-opacity" href="#">View All History</a>
+</div>
+<!-- Primary Booking Card -->
+<div class="tonal-card rounded-xl overflow-hidden group hover:soft-shadow transition-all duration-300">
+<div class="grid md:grid-cols-2">
+<div class="relative h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sun-drenched, minimalist boutique hotel room featuring warm walnut wood furniture and crisp white linen bedding. Large floor-to-ceiling windows look out onto a serene forest landscape at sunrise, casting soft orange light across the neutral bone-colored walls and tactile textures. The room embodies a handcrafted hospitality aesthetic with its clean lines, artisanal ceramics on a nightstand, and a peaceful, domestic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWQorjGSj-Y1yeSYmNOSr0qHqY2Y5prv9ybkAdLLfg5JihaF6XdfIWtrYk6Js8mwTEyuBSahYOxPB2dziMMLRHRJx7EbCe2qSQfXnn07UAqFZZP0RrWNCBxEXxU8nswQrLn44TlNwzHlU0Yr1MEbTbm71fRlQmmFfvWvsvKDnWYcH8KV8unX69wwI9TEuU7Wz8uieZJxEnhgWb76AR5BeNsV7x4LzXhozyT-k0GGT7abboIBZiDvHL0eYajpZPkBW5VOL2oh0dKp5p"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-lg font-label-sm text-label-sm uppercase tracking-wider">Confirmed</div>
+</div>
+<div class="p-md flex flex-col justify-between">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-xs block">Linen Suite</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-sm">Master Weaver's Quarters</h4>
+<div class="flex flex-col gap-xs mb-md">
+<div class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-body-md text-body-md">Oct 12 — Oct 15, 2024</span>
+</div>
+<div class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="group">group</span>
+<span class="font-body-md text-body-md">2 Guests</span>
+</div>
+</div>
+</div>
+<div class="flex gap-sm">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg font-label-md text-label-md hover:soft-shadow transition-all">Check-in Details</button>
+<button class="p-3 border border-secondary/20 rounded-lg text-primary hover:bg-secondary-container/30 transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Bookings Grid -->
+<div class="grid md:grid-cols-2 gap-gutter">
+<div class="tonal-card rounded-xl p-md flex flex-col gap-sm hover:soft-shadow transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-secondary-container text-on-secondary-container p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Past Stay</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold text-primary">The Walnut Loft</h5>
+<p class="text-on-surface-variant text-body-md">August 2024 • 1 Guest</p>
+</div>
+<button class="text-primary font-label-md text-label-md flex items-center gap-xs mt-xs hover:gap-sm transition-all">
+                            Book Again <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="tonal-card rounded-xl p-md flex flex-col gap-sm hover:soft-shadow transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-secondary-container text-on-secondary-container p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Saved</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold text-primary">Garden Terrace Wing</h5>
+<p class="text-on-surface-variant text-body-md">Available Dec 2024</p>
+</div>
+<button class="text-primary font-label-md text-label-md flex items-center gap-xs mt-xs hover:gap-sm transition-all">
+                            View Details <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Profile & Account -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface-container-low border border-secondary/10 rounded-xl p-md soft-shadow">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-fixed-dim">
+<img class="w-full h-full object-cover" data-alt="A professional and friendly portrait of a man in his late 30s with a warm smile, set against a blurred background of a modern, minimalist apartment with warm wooden textures. The lighting is soft and natural, emphasizing a high-quality, boutique lifestyle aesthetic. He wears a premium cotton shirt in a neutral tone, reflecting the handcrafted hospitality brand's refined yet approachable character." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF0fsGG3xQNnFKdDq-Ek3FYlpsnZWl64X0ZtoI5ysHu0WiU1tRUE41cedThMxwIXyXQNjM95vNtauG96b9QrwDuB-oJ1bcmuxf5-lwJGqieejzC74We7gyYKZLzFdqX_LAqppH2Oz9spGrX9lsrGEOvQGq2fxMEYHYAbiOnabhOokR215xCf1JuH3URuxldf3AmAjMwYGkCwKLsRQFBaRxywDocrdF93itdC5908Z6dJDQkACaNlLtaknz2iiFCnS9MImNBQCMFvMp"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Arthur P.</h3>
+<p class="text-on-surface-variant text-label-sm">Member since 2022</p>
+</div>
+</div>
+<h4 class="font-label-md text-label-md text-primary mb-md uppercase tracking-widest">Edit Profile</h4>
+<form class="flex flex-col gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-secondary px-xs">Full Name</label>
+<input class="bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body-md py-2 px-xs" type="text" value="Arthur Pendleton"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-secondary px-xs">Email Address</label>
+<input class="bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body-md py-2 px-xs" type="email" value="arthur.p@example.com"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-secondary px-xs">Phone</label>
+<input class="bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body-md py-2 px-xs" type="tel" value="+1 (555) 000-1234"/>
+</div>
+<div class="mt-sm">
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-label-md text-label-md transition-all active:scale-[0.98]" type="submit">Save Changes</button>
+</div>
+</form>
+<hr class="my-lg border-secondary/10"/>
+<div class="flex flex-col gap-sm">
+<button class="flex items-center justify-between p-3 rounded-lg hover:bg-secondary-container/30 transition-colors group">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md text-on-surface">Payment Methods</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-3 rounded-lg hover:bg-secondary-container/30 transition-colors group">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="notifications">notifications</span>
+<span class="font-label-md text-label-md text-on-surface">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-3 rounded-lg hover:bg-error-container/20 transition-colors group">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-error" data-icon="logout">logout</span>
+<span class="font-label-md text-label-md text-error">Delete Account</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-secondary/10 mt-xl">
+<div class="max-w-[1200px] mx-auto w-full flex flex-col md:flex-row justify-between items-center px-6 md:px-margin-desktop py-xl gap-md">
+<div class="flex flex-col gap-xs items-center md:items-start">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">TopStitch Homestay</span>
+<p class="text-on-surface-variant font-label-sm text-label-sm">© 2024 TopStitch Homestay. Handcrafted Hospitality.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-md">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Rooms</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-sm text-label-sm" href="#">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Contact</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Privacy Policy</a>
+</nav>
+</div>
+</footer>
+<!-- Bottom Nav for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/80 backdrop-blur-md border-t border-secondary/10 flex justify-around items-center py-sm z-50">
+<button class="flex flex-col items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="text-[10px] font-bold uppercase">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-primary">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</button>
+</nav>
+<script>
+        // Subtle interaction for input fields
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').classList.replace('text-secondary', 'text-primary');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').classList.replace('text-primary', 'text-secondary');
+            });
+        });
+
+        // Sticky header transition
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-md', 'shadow-sm');
+            } else {
+                header.classList.add('py-md', 'shadow-sm');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body></html>
